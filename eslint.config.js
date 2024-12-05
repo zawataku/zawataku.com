@@ -28,6 +28,9 @@ export default tseslint.config(
         'warn',
         { allowConstantExport: true },
       ],
+      "tailwindcss/no-custom-classname": [
+        "off"
+      ],
     },
   },
 )
