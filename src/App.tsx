@@ -1,32 +1,15 @@
-import { useEffect } from "react";
+import { Routes, Route } from 'react-router-dom'
 
-import AnimateSVG from "./components/loading/animateSVG";
-import Wrap from "./components/loading/wrap";
-import Top from "./components/top/top";
+import Top from './components/top/top'
+import NotFound from './components/notfound/notfound'
 
-export default function Home() {
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-
-    const animateSVGElement = document.querySelector(".animateSVG") as HTMLElement;
-    const wrapElement = document.querySelector(".wrap") as HTMLElement;
-
-    setTimeout(() => {
-      animateSVGElement.classList.add("-translate-y-full");
-    }, 1500);
-
-    setTimeout(() => {
-      wrapElement.classList.add("-translate-y-full");
-    }, 1700);
-
-  }, []);
-
+const App = () => {
   return (
-    <main>
-      <AnimateSVG />
-      <Wrap />
-      <Top />
-    </main>
-  );
+    <Routes>
+      <Route path='/' element={<Top />} />
+      <Route path='*' element={<NotFound />} />
+    </Routes>
+  )
 }
+
+export default App
