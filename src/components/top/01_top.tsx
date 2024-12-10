@@ -1,7 +1,8 @@
 import Profile from "./02_profile";
 import Self_Introduction from "./03_self_intro";
-import Works from "./04_works";
-import Skills from "./05_skills";
+import Works from "./05_works";
+import Skills from "./04_skills";
+import Footer from "./10_footer";
 
 export default function Top() {
     return (
@@ -9,8 +10,9 @@ export default function Top() {
             <div className="relative flex w-full flex-col items-center justify-center rounded-xl bg-[#fff] p-6 shadow-lg">
                 <Profile />
                 <Self_Introduction />
-                <Works />
                 <Skills />
+                <Works />
+                <Footer />
             </div>
         </main>
     );
