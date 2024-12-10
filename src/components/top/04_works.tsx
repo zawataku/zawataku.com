@@ -1,4 +1,4 @@
-import Works_Card from "./worksProps"
+import Works_Card from "./04a_worksProps"
 export default function Works() {
     return (
         <section className="flex w-full max-w-2xl flex-col gap-12 border-t py-8">

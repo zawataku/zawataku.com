@@ -1,7 +1,7 @@
-import Profile from "./profile";
-import Self_Introduction from "./self_intro";
-import Works from "./works";
-import Skills from "./skills";
+import Profile from "./02_profile";
+import Self_Introduction from "./03_self_intro";
+import Works from "./04_works";
+import Skills from "./05_skills";
 
 export default function Top() {
     return (

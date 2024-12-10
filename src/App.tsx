@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom'
 
-import Top from './components/top/top'
+import Top from './components/top/01_top'
 import NotFound from './components/notfound/notfound'
 
 const App = () => {
