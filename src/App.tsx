@@ -1,9 +1,15 @@
-export default function App() {
+import { Routes, Route } from 'react-router-dom'
+
+import Top from './components/top/01_top'
+import NotFound from './components/notfound/notfound'
+
+const App = () => {
   return (
-    <>
-      <h1 className="text-3xl font-bold underline">
-        Hello world!
-      </h1>
-    </>
+    <Routes>
+      <Route path='/' element={<Top />} />
+      <Route path='*' element={<NotFound />} />
+    </Routes>
   )
 }
+
+export default App
