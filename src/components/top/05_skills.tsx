@@ -11,7 +11,7 @@ export default function Skills() {
 
             <section className="flex flex-col md:gap-1">
                 <h2 className="mb-3 border-l-8 border-l-primary-700 pl-2 text-xl font-bold md:text-3xl">きょうみ</h2>
-                <p className="border-l-8 border-l-[transparent] pl-2 text-base md:text-xl">サーバー / ネットワーク / Linux</p>
+                <p className="border-l-8 border-l-[transparent] pl-2 text-base md:text-xl">サーバー / ネットワーク / Linux / Proxmox</p>
             </section>
 
         </section>
