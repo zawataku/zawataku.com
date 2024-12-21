@@ -2,6 +2,7 @@ import Profile from "./02_profile";
 import Self_Introduction from "./03_self_intro";
 import Works from "./05_works";
 import Skills from "./04_skills";
+import Links from "./06_links";
 import Footer from "./10_footer";
 
 export default function Top() {
@@ -12,6 +13,7 @@ export default function Top() {
                 <Self_Introduction />
                 <Skills />
                 <Works />
+                <Links />
                 <Footer />
             </div>
         </main>
