@@ -39,7 +39,7 @@ export default function WorksPage() {
                             />
                         ))}
                     </section>
-                    <a href="/" className="text-center text-base underline duration-300 hover:opacity-60">トップに戻る</a>
+                    <a href="/" className="text-center text-base underline duration-300 hover:opacity-60">トップページに戻る</a>
 
                 </section>
             </div>
