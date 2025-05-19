@@ -3,4 +3,8 @@
 .content {
     width: 100%;
     background-color: #FFFFFF;
+    border-radius: .75rem;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    padding: 1rem;
+
 }
