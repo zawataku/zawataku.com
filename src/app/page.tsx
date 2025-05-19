@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import Image from "next/image";
 import styles from "./page.module.css";
 
@@ -91,5 +92,29 @@ export default function Home() {
         </a>
       </footer>
     </div>
+=======
+import common_styles from "../styles/00_common/common.module.css"
+import sidebar_styles from "../styles/00_common/sidebar.module.css"
+import content_styles from "../styles/00_common/content.module.css"
+
+
+export default function Home() {
+  return (
+    <main className={common_styles.main}>
+      <div className={sidebar_styles.sidebar}>
+        <h2>Sidebar</h2>
+        <ul>
+          <li>Link 1</li>
+          <li>Link 2</li>
+          <li>Link 3</li>
+        </ul>
+      </div>
+
+      <div className={content_styles.content}>
+        <h1>Welcome to My Website</h1>
+        <p>This is the main content area.</p>
+      </div>
+    </main>
+>>>>>>> Stashed changes
   );
 }
