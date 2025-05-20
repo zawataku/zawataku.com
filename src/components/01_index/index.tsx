@@ -1,10 +1,13 @@
 import Image from "next/image";
+import Link from "next/link";
 import index_styles from "../../styles/01_index/index.module.css";
 import icon_image from "../../../public/image_profile_icon_01.webp";
 
 import { FaSquareTwitter } from "react-icons/fa6";
 import { FaSquareInstagram } from "react-icons/fa6";
 import { FaSquareGithub } from "react-icons/fa6";
+
+import News from "./news";
 
 export default function Index() {
     return (
@@ -25,7 +28,7 @@ export default function Index() {
                 </div>
             </section>
 
-            <section className={index_styles.section}>
+            <section className={index_styles.about_me_section}>
                 <h2 className={index_styles.heading_2}>-- About Me --</h2>
                 <div className={index_styles.about_me_content}>
                     <h3 className={index_styles.heading_3}>自己紹介</h3>
@@ -43,9 +46,12 @@ export default function Index() {
             </section>
 
 
-            <section className={index_styles.section}>
+            <section className={index_styles.news_section}>
                 <h2 className={index_styles.heading_2}>-- 更新情報 --</h2>
-
+                <News />
+                <Link href="/news" className={index_styles.news_link}>
+                    すべての更新履歴を見る
+                </Link>
             </section>
         </div>
     )

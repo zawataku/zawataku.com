@@ -22,7 +22,8 @@ export const client = createClient({
 //一覧を取得
 export const getNews = async () => {
     const news = await client.getList<News>({
-        endpoint: "news"
+        endpoint: "news",
+        queries: { offset: 0, limit: 5 }
     });
     return news;
 };

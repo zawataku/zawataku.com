@@ -1,0 +1,19 @@
+@charset "utf-8";
+
+.news_list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 576px;
+    width: 100%;
+}
+
+.news_item {
+    display: flex;
+    gap: 2rem;
+    font-size: 1.25rem;
+}
+
+.news_date {
+    font-weight: 900;
+}

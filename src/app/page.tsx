@@ -1,13 +1,13 @@
 import Index from "@/components/01_index";
 
 import common_styles from "../styles/00_common/common.module.css"
-import sidebar_styles from "../styles/00_common/sidebar.module.css"
+import side_menu_styles from "../styles/00_common/side_menu.module.css"
 import content_styles from "../styles/00_common/content.module.css"
 
 export default function Home() {
   return (
     <main className={common_styles.main}>
-      <div className={sidebar_styles.sidebar}>
+      <div className={side_menu_styles.sidebar}>
         <h2>Sidebar</h2>
         <ul>
           <li>Link 1</li>

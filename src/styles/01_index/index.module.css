@@ -18,7 +18,7 @@
     padding: 4rem 0 2.5rem 0;
 }
 
-.section {
+.about_me_section {
     width: 100%;
     max-width: 672px;
     display: flex;
@@ -27,6 +27,26 @@
     padding: 2.5rem 0;
     border-top-width: 1px;
     border-top-style: solid;
+}
+
+.news_section {
+    width: 100%;
+    max-width: 672px;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem 0;
+    border-top-width: 1px;
+    border-top-style: solid;
+}
+
+.news_link {
+    text-decoration: underline;
+    font-weight: 700;
+    font-size: 1.25rem;
+    text-underline-offset: 4px;
 }
 
 .profile_icon {
