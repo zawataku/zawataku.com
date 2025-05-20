@@ -6,7 +6,6 @@ import { FaSquareTwitter } from "react-icons/fa6";
 import { FaSquareInstagram } from "react-icons/fa6";
 import { FaSquareGithub } from "react-icons/fa6";
 
-
 export default function Index() {
     return (
         <div className={index_styles.container}>
