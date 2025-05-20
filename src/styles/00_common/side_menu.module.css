@@ -1,10 +1,25 @@
 @charset "UTF-8";
 
-.sidebar {
-    width: 33%;
+.side_menu {
+    width: 35%;
     height: 100%;
     background-color: #FFFFFF;
     border-radius: .75rem;
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-    padding: 1rem;
+    padding: 3rem 1rem;
+}
+
+.side_menu_inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.side_menu_title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text);
+    text-align: center;
 }
