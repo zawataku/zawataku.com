@@ -1,6 +1,6 @@
 :root {
-  --background: oklch(89.2% 0.058 10.001);
-  --text: oklch(41% 0.159 10.272);
+  --background: rgb(252 165 165);
+  --text: rgb(153 27 27);
 }
 
 @layer base {

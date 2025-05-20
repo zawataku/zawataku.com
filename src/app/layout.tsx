@@ -7,7 +7,7 @@ const zenMaruGothic = Zen_Maru_Gothic({
   variable: "--font-zen-maru-gothic",
   subsets: ["latin"],
   display: "swap",
-  weight: ["400", "700"],
+  weight: ["500", "700"],
 });
 
 export const metadata: Metadata = {
