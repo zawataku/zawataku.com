@@ -1,8 +1,7 @@
 @charset "UTF-8";
 
 .side_menu {
-    width: 35%;
-    height: 100%;
+    width: 100%;
     background-color: #FFFFFF;
     border-radius: .75rem;
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
@@ -22,4 +21,29 @@
     font-weight: 700;
     color: var(--text);
     text-align: center;
+}
+
+.side_menu_ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 16rem;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+.side_menu_li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-bottom: 2px solid;
+    transition: all .3s;
+    padding: 0 0.25rem 2px 0.25rem;
+}
+
+.side_menu_li :hover {
+    opacity: 60%;
 }

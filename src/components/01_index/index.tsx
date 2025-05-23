@@ -35,14 +35,14 @@ export default function Index() {
                     <p className={index_styles.about_me_text}>ざわたくです。石川県の大学生です。</p>
                     <p className={index_styles.about_me_text}>さけるチーズとサラダチキンが好きです。</p>
                 </div>
-                <div className={index_styles.about_me_content}>
+                {/* <div className={index_styles.about_me_content}>
                     <h3 className={index_styles.heading_3}>すきなもの</h3>
                     <p className={index_styles.about_me_text}>さけるチーズ / サラダチキン</p>
                 </div>
                 <div className={index_styles.about_me_content}>
                     <h3 className={index_styles.heading_3}>趣味</h3>
                     <p className={index_styles.about_me_text}>お絵描き / フィルムカメラ</p>
-                </div>
+                </div> */}
             </section>
 
 
