@@ -2,7 +2,7 @@ import { FaSquareXTwitter, FaSquareInstagram, FaSquareGithub } from "react-icons
 
 export default function Profile() {
     return (
-        <section className="flex w-full max-w-3xl flex-col items-center gap-8 pb-10">
+        <section className="flex w-full max-w-3xl flex-col items-center gap-8 pb-6">
             <div className="justify-center">
                 <img
                     src="/img/photo_001.webp"

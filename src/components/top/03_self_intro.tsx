@@ -1,8 +1,11 @@
 export default function Self_Introduction() {
     return (
-        <section className="flex w-full max-w-2xl flex-col gap-14 border-t py-10">
-            <h1 className="text-center text-3xl font-bold md:text-4xl">-- About Me --</h1>
-
+        <section className="flex w-full max-w-2xl flex-col gap-14 py-6">
+            <div className="flex gap-1 items-center justify-center">
+                <hr className="h-[2px] border-rubyred border-t-2 border-dashed w-4/5 md:w-full" />
+                <h2 className="text-center text-2xl font-bold w-full md:text-3xl">About Me</h2>
+                <hr className="h-[2px] border-rubyred border-t-2 border-dashed w-4/5 md:w-full" />
+            </div>
             {/* 自己紹介 */}
             <section className="flex flex-col md:gap-1">
                 <h2 className="mb-3 border-l-8 border-l-primary-700 pl-2 text-xl font-bold md:text-3xl">自己紹介</h2>
