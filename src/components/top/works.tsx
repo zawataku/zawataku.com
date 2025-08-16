@@ -29,8 +29,8 @@ export default function Works() {
                 <hr className="h-[2px] border-rubyred border-t-2 border-dashed w-4/5 md:w-full" />
             </div>
             {works.map((work) => (
-                <a href={work.link} target="_blank" >
-                    <div key={work.id} className="flex rounded-xl p-1 duration-300 hover:opacity-60 md:p-3">
+                <a key={work.id} href={work.link} target="_blank" >
+                    <div className="flex rounded-xl p-1 duration-300 hover:opacity-60 md:p-3">
                         {work.images && (
                             <img
                                 src={work.images.url}

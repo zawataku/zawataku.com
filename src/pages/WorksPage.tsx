@@ -27,8 +27,8 @@ export default function WorksPage() {
                     <h1 className="text-center text-base md:text-xl">自慢の制作物たち</h1>
                     <section className="flex flex-col gap-6 py-10">
                         {works.map((work) => (
-                            <a href={work.link} target="_blank" >
-                                <div key={work.id} className="flex rounded-xl p-1 duration-300 hover:opacity-60 md:p-3">
+                            <a key={work.id} href={work.link} target="_blank" >
+                                <div className="flex rounded-xl p-1 duration-300 hover:opacity-60 md:p-3">
                                     {work.images && (
                                         <img
                                             src={work.images.url}
