@@ -2,7 +2,7 @@ import { FaSquareTwitter, FaSquareInstagram, FaSquareGithub } from "react-icons/
 
 export default function Profile() {
     return (
-        <section className="flex w-full max-w-2xl flex-col items-center gap-8 py-4">
+        <section className="flex w-full max-w-2xl flex-col items-center gap-8 pb-4">
             <div className="block">
                 <img
                     src="/img/icon.webp"
