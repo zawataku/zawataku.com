@@ -1,9 +1,9 @@
-import Profile from "./02_profile";
-import Self_Introduction from "./03_self_intro";
-import Works from "./05_works";
-import Skills from "./04_skills";
-import Links from "./06_links";
-import Footer from "./10_footer";
+import Profile from "./profile";
+import Self_Introduction from "./self_intro";
+import Works from "./works";
+import Skills from "./skills";
+import Links from "./links";
+import Footer from "./footer";
 
 export default function Top() {
     return (

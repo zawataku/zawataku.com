@@ -16,3 +16,7 @@ export type Work = {
     comment: string;
     link: string;
 };
+
+export type News = {
+
+}
