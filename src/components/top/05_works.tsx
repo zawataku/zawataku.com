@@ -1,43 +1,53 @@
-import Works_Card from "./05a_worksProps";
-import { useEffect, useState } from "react";
+import { useState, useEffect } from 'react';
+import { client } from '../../libs/client';
+import type { Work } from '../../types/microcms';
 
-type Work = {
-    id: number;
-    link: string;
-    imgpath: string;
-    title: string;
-    description: string;
-};
-
-export default function Works() {
+function App() {
     const [works, setWorks] = useState<Work[]>([]);
 
     useEffect(() => {
-        fetch(`${import.meta.env.VITE_WORKERS_URL}/works`)
-            .then((response) => response.json())
-            .then((data) => {
-                // IDの大きい順にソートし、最新2件を取得
-                const sortedData = data
-                    .sort((a: Work, b: Work) => b.id - a.id) // 降順ソート
-                    .slice(0, 2); // 最新2件を取得
-                setWorks(sortedData);
-            });
+        const getWorks = async () => {
+            try {
+                const data = await client.get({
+                    endpoint: 'works',
+                    queries: { limit: 2 }
+                });
+                setWorks(data.contents);
+            } catch (error) {
+                console.error('データの取得に失敗しました:', error);
+            }
+        };
+
+        getWorks();
     }, []);
 
     return (
-        <section className="flex w-full max-w-2xl flex-col gap-6 border-t py-10">
-            <h1 className="text-center text-3xl font-bold md:text-4xl">-- Works --</h1>
+        <section className="flex w-full max-w-2xl flex-col gap-8 py-6">
+            <div className="flex items-center justify-center">
+                <hr className="h-[2px] border-rubyred border-t-2 border-dashed w-4/5 md:w-full" />
+                <h2 className="text-center text-2xl font-bold w-full md:text-3xl">Works</h2>
+                <hr className="h-[2px] border-rubyred border-t-2 border-dashed w-4/5 md:w-full" />
+            </div>
             {works.map((work) => (
-                <Works_Card
-                    key={work.id}
-                    link={work.link}
-                    imgpath={work.imgpath}
-                    title={work.title}
-                    description={work.description}
-                />
+                <a href={work.link} target="_blank" >
+                    <div key={work.id} className="flex rounded-xl p-1 duration-300 hover:opacity-60 md:p-3">
+                        {work.images && (
+                            <img
+                                src={work.images.url}
+                                alt={work.title}
+                                className='size-24 rounded-xl shadow-md'
+                            />
+                        )}
+                        <div className="ml-4 flex flex-col gap-3">
+                            <h3 className="line-clamp-1 text-xl font-bold md:text-2xl">{work.title}</h3>
+                            <p className="line-clamp-2 text-sm text-rubyred md:text-base">{work.description}</p>
+                        </div>
+                    </div>
+                </a>
             ))}
-
             <a href="/works" className="text-center text-base underline duration-300 hover:opacity-60">その他はこちら</a>
         </section>
     );
 }
+
+export default App;
