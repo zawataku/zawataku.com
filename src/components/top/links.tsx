@@ -2,7 +2,7 @@ import { FaTwitter, FaInstagram, FaGithub } from "react-icons/fa6";
 
 export default function Links() {
     return (
-        <section className="flex w-full max-w-2xl flex-col gap-8 py-6">
+        <section className="flex w-full max-w-2xl flex-col gap-8 py-4">
             <div className="flex items-center justify-center">
                 <hr className="h-[2px] border-rubyred border-t-2 border-dashed w-4/5 md:w-full" />
                 <h2 className="text-center text-2xl font-bold w-full md:text-3xl">Links</h2>
