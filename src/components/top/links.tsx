@@ -20,7 +20,7 @@ export default function Links() {
                     <span className="mr-2 flex size-7 items-center justify-center">
                         <FaInstagram size={24} />
                     </span>
-                    <a href="https://www.instagram.com/zawataku0819" target="blank">Instagram（フィルム多め）</a>
+                    <a href="https://www.instagram.com/zawataku_photo" target="blank">Instagram（フィルム多め）</a>
                 </li>
                 <li className="flex items-center duration-300 hover:opacity-60">
                     <span className="mr-2 flex size-7 items-center justify-center">
@@ -38,7 +38,7 @@ export default function Links() {
                     <span className="mr-2 flex size-7 items-center justify-center">
                         <img src="/img/booth.svg" className="size-[24px]" />
                     </span>
-                    <a href="https://zawataku.booth.pm/" target="blank">BOOTH（なんか売るかも）</a>
+                    <a href="https://zawataku.booth.pm" target="blank">BOOTH（なんか売るかも）</a>
                 </li>
             </ul>
 
