@@ -6,7 +6,7 @@ export default function Self_Introduction() {
                 <h2 className="text-center text-2xl font-bold w-full md:text-3xl">About Me</h2>
                 <hr className="h-[2px] border-rubyred border-t-2 border-dashed w-4/5 md:w-full" />
             </div>
-            <div className="flex w-full flex-col gap-14">
+            <div className="flex w-full flex-col gap-8 md:gap-14">
                 {/* 自己紹介 */}
                 <section className="flex flex-col md:gap-1">
                     <h2 className="mb-3 border-l-8 border-l-rubyred pl-2 text-xl font-bold md:text-2xl">自己紹介</h2>

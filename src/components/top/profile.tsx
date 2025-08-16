@@ -10,7 +10,7 @@ export default function Profile() {
                     className="size-36 rounded-full border-2 border-solid border-rubyred -mt-[50%]"
                 />
             </div>
-            <h1 className="text-center text-2xl font-bold md:text-4xl">ざわたく</h1>
+            <h1 className="text-center text-3xl font-bold md:text-4xl">ざわたく</h1>
 
             <div className="flex gap-8">
                 <a href="https://twitter.com/zawataku0819" target="_blank" aria-label="Twitter" className="text-rubyred duration-300 hover:opacity-60">
