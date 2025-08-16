@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { client } from '../../libs/client';
 import type { Work } from '../../types/microcms';
 
-function App() {
+export default function Works() {
     const [works, setWorks] = useState<Work[]>([]);
 
     useEffect(() => {
@@ -49,5 +49,3 @@ function App() {
         </section>
     );
 }
-
-export default App;
