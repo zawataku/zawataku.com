@@ -14,7 +14,7 @@ export default function Skills() {
 
                 <section className="flex flex-col md:gap-1">
                     <h2 className="mb-3 border-l-8 border-l-rubyred pl-2 text-xl font-bold md:text-2xl">きょうみ</h2>
-                    <p className="border-l-8 border-l-[transparent] pl-2 text-base md:text-lg">ITインフラまわり / Vue.js</p>
+                    <p className="border-l-8 border-l-[transparent] pl-2 text-base md:text-lg">ITインフラまわり / Ruby on Rails</p>
                 </section>
             </div>
         </section>

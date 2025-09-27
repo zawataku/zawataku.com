@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { client } from '../../libs/client';
 import type { News } from '../../types/microcms';
+import { DotPulse } from 'ldrs/react'
+import 'ldrs/react/DotPulse.css'
 
 // 日付をフォーマットするヘルパー関数
 const formatDate = (dateString: string) => {
@@ -13,6 +15,7 @@ const formatDate = (dateString: string) => {
 
 export default function News() {
     const [news, setNews] = useState<News[]>([]);
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         const getNews = async () => {
@@ -24,6 +27,8 @@ export default function News() {
                 setNews(data.contents);
             } catch (error) {
                 console.error('ニュースの取得に失敗しました:', error);
+            } finally {
+                setIsLoading(false);
             }
         };
 
@@ -38,12 +43,22 @@ export default function News() {
                 <hr className="h-[2px] w-4/5 border-t-2 border-dashed border-rubyred md:w-full" />
             </div>
             <ul className='flex flex-col gap-2 text-base md:text-lg'>
-                {news.map((item) => (
-                    <li key={item.id} className='flex gap-5'>
-                        <span>{formatDate(item.publishedAt)}</span>
-                        <span dangerouslySetInnerHTML={{ __html: item.title }} />
-                    </li>
-                ))}
+                {isLoading ? (
+                    <div className="flex justify-center py-10">
+                        <DotPulse
+                            size="50"
+                            speed="1.3"
+                            color="#991B1B"
+                        />
+                    </div>
+                ) : (
+                    news.map((item) => (
+                        <li key={item.id} className='flex gap-5'>
+                            <span>{formatDate(item.publishedAt)}</span>
+                            <span dangerouslySetInnerHTML={{ __html: item.title }} />
+                        </li>
+                    ))
+                )}
             </ul>
         </section>
     );
