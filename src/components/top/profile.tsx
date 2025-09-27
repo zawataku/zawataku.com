@@ -7,7 +7,7 @@ export default function Profile() {
                 <img
                     src="/img/icon.webp"
                     alt="プロフィールアイコン"
-                    className="size-36 rounded-full border-2 border-solid border-rubyred -mt-[50%]"
+                    className="mt-[-50%] size-36 rounded-full border-2 border-solid border-rubyred"
                 />
             </div>
             <h1 className="text-center text-3xl font-bold md:text-4xl">ざわたく</h1>

@@ -21,7 +21,7 @@ export default function WorksPage() {
     }, []);
     return (
         <main className="fflex min-h-screen flex-col items-center bg-lavenderblush px-2 py-4 text-rubyred">
-            <div className="relative flex w-full mx-auto max-w-4xl flex-col items-center justify-center rounded-xl bg-white px-6 border-rubyred border-2">
+            <div className="relative mx-auto flex w-full max-w-4xl flex-col items-center justify-center rounded-xl border-2 border-rubyred bg-white px-6">
                 <section className="flex w-full max-w-2xl flex-col gap-4 py-10">
                     <h1 className="text-center text-3xl font-bold md:text-4xl">-- Works --</h1>
                     <h1 className="text-center text-base md:text-xl">自慢の制作物たち</h1>

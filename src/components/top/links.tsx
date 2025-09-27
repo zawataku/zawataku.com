@@ -4,9 +4,9 @@ export default function Links() {
     return (
         <section className="flex w-full max-w-2xl flex-col gap-8 py-4">
             <div className="flex items-center justify-center">
-                <hr className="h-[2px] border-rubyred border-t-2 border-dashed w-4/5 md:w-full" />
-                <h2 className="text-center text-2xl font-bold w-full md:text-3xl">Links</h2>
-                <hr className="h-[2px] border-rubyred border-t-2 border-dashed w-4/5 md:w-full" />
+                <hr className="h-[2px] w-4/5 border-t-2 border-dashed border-rubyred md:w-full" />
+                <h2 className="w-full text-center text-2xl font-bold md:text-3xl">Links</h2>
+                <hr className="h-[2px] w-4/5 border-t-2 border-dashed border-rubyred md:w-full" />
             </div>
 
             <ul className="list-none space-y-6 border-l-8 border-l-[transparent] pl-0 text-base md:text-xl">

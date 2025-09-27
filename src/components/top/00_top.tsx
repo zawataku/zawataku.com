@@ -8,8 +8,8 @@ import Footer from "./footer";
 
 export default function Top() {
     return (
-        <main className="flex min-h-screen flex-col items-center bg-lavenderblush px-2 pt-40 pb-16 text-rubyred">
-            <div className="relative flex w-full mx-auto max-w-4xl flex-col items-center justify-center rounded-xl bg-white px-6 border-rubyred border-2">
+        <main className="flex min-h-screen flex-col items-center bg-lavenderblush px-2 pb-16 pt-40 text-rubyred">
+            <div className="relative mx-auto flex w-full max-w-4xl flex-col items-center justify-center rounded-xl border-2 border-rubyred bg-white px-6">
                 <Profile />
                 <Self_Introduction />
                 <News />
