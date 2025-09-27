@@ -42,7 +42,7 @@ export default function News() {
                 <h2 className="w-full text-center text-2xl font-bold md:text-3xl">更新情報</h2>
                 <hr className="h-[2px] w-4/5 border-t-2 border-dashed border-rubyred md:w-full" />
             </div>
-            <ul className='flex flex-col gap-2 text-base md:text-lg'>
+            <ul className='flex flex-col gap-3 text-base md:text-lg'>
                 {isLoading ? (
                     <div className="flex justify-center py-10">
                         <DotPulse
@@ -53,8 +53,8 @@ export default function News() {
                     </div>
                 ) : (
                     news.map((item) => (
-                        <li key={item.id} className='flex gap-5'>
-                            <span>{formatDate(item.publishedAt)}</span>
+                        <li key={item.id} className='flex gap-5 overflow-hidden'>
+                            <span className='shrink-0'>{formatDate(item.publishedAt)}</span>
                             <span dangerouslySetInnerHTML={{ __html: item.title }} />
                         </li>
                     ))
