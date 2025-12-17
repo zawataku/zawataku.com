@@ -1,9 +1,14 @@
-name: Deploy to Firebase Hosting
+name: Deploy to AWS (S3 & CloudFront)
 
 on:
   push:
     branches:
       - main
+
+# OIDC認証の設定
+permissions:
+  id-token: write
+  contents: read
 
 jobs:
   build_and_deploy:
@@ -28,10 +33,19 @@ jobs:
           VITE_MICROCMS_SERVICE_DOMAIN: ${{ secrets.VITE_MICROCMS_SERVICE_DOMAIN }}
           CI: false 
 
-      - name: Deploy to Firebase
-        uses: FirebaseExtended/action-hosting-deploy@v0
+      # AWSへの認証 (OIDC)
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
         with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT }}'
-          channelId: live
-          projectId: '${{ secrets.FIREBASE_PROJECT_ID }}'
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: ap-northeast-1
+
+      # S3へファイルを同期
+      - name: Deploy to S3
+        run: |
+          aws s3 sync ./dist s3://${{ secrets.AWS_S3_BUCKET_NAME }} --delete
+
+      # CloudFrontのキャッシュをクリア
+      - name: Invalidate CloudFront cache
+        run: |
+          aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_CLOUDFRONT_ID }} --paths "/*"
