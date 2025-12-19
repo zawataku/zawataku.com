@@ -12,6 +12,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "baseline-browser-mapping": "^2.9.10",
+    "caniuse-lite": "^1.0.30001760",
     "ldrs": "^1.1.7",
     "microcms-js-sdk": "^3.2.0",
     "react": "^18.3.1",

@@ -5,9 +5,9 @@ export default function Profile() {
         <section className="flex w-full max-w-2xl flex-col items-center gap-8 pb-4">
             <div className="block">
                 <img
-                    src="/img/icon.webp"
+                    src="/img/icon.avif"
                     alt="プロフィールアイコン"
-                    className="mt-[-50%] size-36 rounded-full border-2 border-solid border-rubyred"
+                    className="mt-[-50%] size-36 rounded-full border-[6px] border-solid border-[#fff]"
                 />
             </div>
             <h1 className="text-center text-3xl font-bold md:text-4xl">ざわたく</h1>

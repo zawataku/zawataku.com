@@ -1,7 +1,0 @@
-@charset "UTF-8";
-
-.main {
-    max-width: 1024px;
-    display: flex;
-    gap: 4rem;
-}

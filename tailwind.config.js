@@ -20,7 +20,7 @@ export default {
         '950': '#450a0a',
       },
       'white': '#ffffff',
-      'lavenderblush': '#FFF1F2',
+      'lavenderblush': '#ffebec',
       'rubyred': '#991B1B',
       'platinum': '#E5E5E5'
     },
