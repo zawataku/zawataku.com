@@ -1,20 +1,22 @@
+import styles from "./skills.module.css";
+
 export default function Skills() {
     return (
-        <section className="flex w-full max-w-2xl flex-col gap-8 py-4">
-            <div className="flex items-center justify-center">
-                <hr className="h-[2px] w-4/5 border-t-2 border-dashed border-rubyred md:w-full" />
-                <h2 className="w-full text-center text-2xl font-bold md:text-3xl">Skills</h2>
-                <hr className="h-[2px] w-4/5 border-t-2 border-dashed border-rubyred md:w-full" />
+        <section className={styles.container}>
+            <div className={styles.header}>
+                <hr className={styles.separator} />
+                <h2 className={styles.title}>Skills</h2>
+                <hr className={styles.separator} />
             </div>
-            <div className="flex w-full flex-col gap-8 md:gap-14">
-                <section className="flex flex-col md:gap-1">
-                    <h2 className="mb-3 border-l-8 border-l-rubyred pl-2 text-xl font-bold md:text-2xl">ちょっとわかる</h2>
-                    <p className="border-l-8 border-l-[transparent] pl-2 text-base md:text-lg">Next.js / React / Tailwind / 自宅鯖</p>
+            <div className={styles.skillsList}>
+                <section className={styles.skillSection}>
+                    <h2 className={styles.skillTitle}>ちょっとわかる</h2>
+                    <p className={styles.skillDescription}>Next.js / React / Tailwind / 自宅鯖</p>
                 </section>
 
-                <section className="flex flex-col md:gap-1">
-                    <h2 className="mb-3 border-l-8 border-l-rubyred pl-2 text-xl font-bold md:text-2xl">きょうみ</h2>
-                    <p className="border-l-8 border-l-[transparent] pl-2 text-base md:text-lg">ITインフラまわり / Ruby on Rails</p>
+                <section className={styles.skillSection}>
+                    <h2 className={styles.skillTitle}>きょうみ</h2>
+                    <p className={styles.skillDescription}>ITインフラまわり / Ruby on Rails</p>
                 </section>
             </div>
         </section>

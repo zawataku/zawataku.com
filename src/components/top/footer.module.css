@@ -1,0 +1,23 @@
+.footer {
+    display: flex;
+    width: 100%;
+    max-width: 42rem;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding-bottom: 2.5rem;
+    padding-top: 1.5rem;
+    text-align: center;
+}
+
+.separator {
+    height: 2px;
+    width: 100%;
+    border-top-width: 2px;
+    border-style: dashed;
+    border-color: #991B1B;
+}
+
+.copyright {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
