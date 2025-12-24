@@ -30,13 +30,13 @@ export default function Links() {
                 </li>
                 <li className="flex items-center duration-300 hover:opacity-60">
                     <span className="mr-2 flex size-7 items-center justify-center">
-                        <img src="/img/pixiv.png" className="size-[24px]" />
+                        <img src="/img/pixiv.png" className="size-[24px]" alt="Pixivのロゴ" />
                     </span>
                     <a href="https://www.pixiv.net/users/49844579" target="blank">pixiv（あんま動かしてない）</a>
                 </li>
                 <li className="flex items-center duration-300 hover:opacity-60">
                     <span className="mr-2 flex size-7 items-center justify-center">
-                        <img src="/img/booth.svg" className="size-[24px]" />
+                        <img src="/img/booth.svg" className="size-[24px]" alt="BOOTHのロゴ" />
                     </span>
                     <a href="https://zawataku.booth.pm" target="blank">BOOTH（なんか売るかも）</a>
                 </li>
