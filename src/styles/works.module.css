@@ -42,14 +42,14 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
     line-clamp: 1;
-    font-size: 1.25rem;
-    line-height: 1.75rem;
+    font-size: 1.15rem;
+    line-height: 1.5rem;
     font-weight: 700;
 }
 
 @media (min-width: 768px) {
     .workTitle {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         line-height: 2rem;
     }
 }
@@ -61,14 +61,14 @@
     -webkit-line-clamp: 2;
     line-clamp: 2;
     font-size: 0.875rem;
-    line-height: 1.25rem;
+    line-height: 1.5rem;
     color: #991B1B;
 }
 
 @media (min-width: 768px) {
     .workDescription {
         font-size: 1rem;
-        line-height: 1.5rem;
+        line-height: 1.75rem;
     }
 }
 
@@ -78,6 +78,7 @@
     line-height: 1.5rem;
     text-decoration-line: underline;
     transition-duration: 300ms;
+    text-underline-offset: 0.25rem;
 }
 
 .moreLink:hover {

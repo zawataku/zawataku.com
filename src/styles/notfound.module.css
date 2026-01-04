@@ -4,10 +4,7 @@
     flex-direction: column;
     align-items: center;
     background-color: #ffebec;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: 2rem 0.5rem;
     color: #991B1B;
 }
 
@@ -19,20 +16,18 @@
     width: 100%;
     max-width: 56rem;
     flex-direction: column;
+    gap: 2rem;
     align-items: center;
     justify-content: center;
-    border-radius: 0.75rem;
-    background-color: #ffffff;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    background-color: transparent;
 }
 
 .content {
     display: flex;
-    height: 100vh;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 2rem 0;
 }
 
 .image {
@@ -71,18 +66,26 @@
 
 .description {
     text-align: center;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+}
+
+
+@media (min-width: 768px) {
+    .description {
+        font-size: 1rem;
+        line-height: 1.75rem;
+    }
 }
 
 .link {
     margin-top: 1.5rem;
-    border-radius: 0.25rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5rem;
     text-decoration-line: underline;
-    text-underline-offset: 4px;
     transition-duration: 300ms;
+    text-underline-offset: 0.25rem;
 }
 
 .link:hover {

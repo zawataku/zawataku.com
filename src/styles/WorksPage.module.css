@@ -4,10 +4,7 @@
     flex-direction: column;
     align-items: center;
     background-color: #ffebec;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding: 2rem 0.5rem;
     color: #991B1B;
 }
 
@@ -16,60 +13,13 @@
     margin-left: auto;
     margin-right: auto;
     display: flex;
-    min-height: 95vh;
     width: 100%;
     max-width: 56rem;
     flex-direction: column;
+    gap: 2rem;
     align-items: center;
-    border-radius: 0.75rem;
-    background-color: #ffffff;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-}
-
-.section {
-    display: flex;
-    width: 100%;
-    max-width: 42rem;
-    flex-direction: column;
-    gap: 1rem;
-    padding-top: 3.5rem;
-    padding-bottom: 3.5rem;
-}
-
-.title {
-    text-align: center;
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-    font-weight: 700;
-}
-
-@media (min-width: 768px) {
-    .title {
-        font-size: 2.25rem;
-        line-height: 2.5rem;
-    }
-}
-
-.subtitle {
-    text-align: center;
-    font-size: 1rem;
-    line-height: 1.5rem;
-}
-
-@media (min-width: 768px) {
-    .subtitle {
-        font-size: 1.25rem;
-        line-height: 1.75rem;
-    }
-}
-
-.worksListSection {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    padding-top: 2.5rem;
-    padding-bottom: 2.5rem;
+    justify-content: center;
+    background-color: transparent;
 }
 
 .loadingContainer {
@@ -79,19 +29,19 @@
     padding-bottom: 2.5rem;
 }
 
-.workItemContainer {
+.workItem {
     display: flex;
     border-radius: 0.75rem;
     padding: 0.25rem;
     transition-duration: 300ms;
 }
 
-.workItemContainer:hover {
+.workItem:hover {
     opacity: 0.6;
 }
 
 @media (min-width: 768px) {
-    .workItemContainer {
+    .workItem {
         padding: 0.75rem;
     }
 }
@@ -110,20 +60,26 @@
     gap: 0.75rem;
 }
 
+.worksListSection {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
 .workTitle {
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 1;
     line-clamp: 1;
-    font-size: 1.25rem;
-    line-height: 1.75rem;
+    font-size: 1.15rem;
+    line-height: 1.5rem;
     font-weight: 700;
 }
 
 @media (min-width: 768px) {
     .workTitle {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         line-height: 2rem;
     }
 }
@@ -135,14 +91,14 @@
     -webkit-line-clamp: 2;
     line-clamp: 2;
     font-size: 0.875rem;
-    line-height: 1.25rem;
+    line-height: 1.5rem;
     color: #991B1B;
 }
 
 @media (min-width: 768px) {
     .workDescription {
         font-size: 1rem;
-        line-height: 1.5rem;
+        line-height: 1.75rem;
     }
 }
 
@@ -152,6 +108,7 @@
     line-height: 1.5rem;
     text-decoration-line: underline;
     transition-duration: 300ms;
+    text-underline-offset: 0.25rem;
 }
 
 .homeLink:hover {

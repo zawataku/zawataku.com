@@ -38,30 +38,30 @@ export default function News() {
     }, []);
 
     return (
-        <section className={commonStyles.container}>
-            <div className={commonStyles.header}>
-                <hr className={styles.separator} />
-                <h2 className={commonStyles.title}>更新情報</h2>
-                <hr className={styles.separator} />
+        <section className={commonStyles.section}>
+            <div className={commonStyles.container}>
+                <div className={commonStyles.header}>
+                    <h2 className={commonStyles.title}>更新情報</h2>
+                </div>
+                <ul className={styles.newsList}>
+                    {isLoading ? (
+                        <div className={styles.loadingContainer}>
+                            <DotPulse
+                                size="50"
+                                speed="1.3"
+                                color="#991B1B"
+                            />
+                        </div>
+                    ) : (
+                        news.map((item) => (
+                            <li key={item.id} className={styles.newsItem}>
+                                <span className={styles.date}>{formatDate(item.publishedAt)}</span>
+                                <span dangerouslySetInnerHTML={{ __html: item.title }} />
+                            </li>
+                        ))
+                    )}
+                </ul>
             </div>
-            <ul className={styles.newsList}>
-                {isLoading ? (
-                    <div className={styles.loadingContainer}>
-                        <DotPulse
-                            size="50"
-                            speed="1.3"
-                            color="#991B1B"
-                        />
-                    </div>
-                ) : (
-                    news.map((item) => (
-                        <li key={item.id} className={styles.newsItem}>
-                            <span className={styles.date}>{formatDate(item.publishedAt)}</span>
-                            <span dangerouslySetInnerHTML={{ __html: item.title }} />
-                        </li>
-                    ))
-                )}
-            </ul>
         </section>
     );
 }

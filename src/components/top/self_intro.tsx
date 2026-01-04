@@ -6,9 +6,7 @@ export default function Self_Introduction() {
         <section className={commonStyles.section}>
             <div className={commonStyles.container}>
                 <div className={commonStyles.header}>
-                    <hr className={commonStyles.separator} />
-                    <h2 className={commonStyles.title}>About Me</h2>
-                    <hr className={commonStyles.separator} />
+                    <h2 className={commonStyles.title}>プロフィール</h2>
                 </div>
                 <div className={styles.content}>
                     <section className={styles.section}>
@@ -19,12 +17,22 @@ export default function Self_Introduction() {
 
                     <section className={styles.section}>
                         <h2 className={styles.sectionTitle}>好きなもの</h2>
-                        <p className={styles.text}>さけるチーズ / サラダチキン</p>
+                        <p className={styles.text}>さけるチーズ / サラダチキン / ルイボスティー</p>
                     </section>
 
                     <section className={styles.section}>
                         <h2 className={styles.sectionTitle}>好きなこと</h2>
-                        <p className={styles.text}>お絵描き / フィルムカメラ</p>
+                        <p className={styles.text}>お絵描き / フィルム写真撮影</p>
+                    </section>
+
+                    <section className={styles.section}>
+                        <h2 className={styles.sectionTitle}>好きな言語・技術</h2>
+                        <p className={styles.text}>React / Electron</p>
+                    </section>
+
+                    <section className={styles.section}>
+                        <h2 className={styles.sectionTitle}>好きなカメラ</h2>
+                        <p className={styles.text}>オリンパスペンF / オリンパスペンS</p>
                     </section>
                 </div>
             </div>

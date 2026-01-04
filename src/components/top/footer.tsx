@@ -1,10 +1,10 @@
 import styles from "../../styles/footer.module.css";
+import commonStyles from '../../styles/common.module.css';
 
 export default function Footer() {
     return (
-        <footer className={styles.footer}>
-            <hr className={styles.separator} />
-            <p className={styles.copyright}>© 2024 - 2025 ざわたく.com</p>
+        <footer className={commonStyles.section}>
+            <p className={styles.copyright}>(c) 2023 - 2026 ざわたく all rights reserved.</p>
         </footer>
     )
 }

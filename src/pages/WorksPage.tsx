@@ -3,7 +3,9 @@ import { client } from '../libs/client';
 import type { Work } from '../types/microcms';
 import { LineSpinner } from 'ldrs/react'
 import 'ldrs/react/LineSpinner.css'
-import styles from './WorksPage.module.css';
+import styles from '../styles/WorksPage.module.css';
+import commonStyles from '../styles/common.module.css';
+import Footer from '../components/top/footer';
 
 export default function WorksPage() {
     const [works, setWorks] = useState<Work[]>([]);
@@ -28,41 +30,45 @@ export default function WorksPage() {
     return (
         <main className={styles.main}>
             <div className={styles.container}>
-                <section className={styles.section}>
-                    <h1 className={styles.title}>-- Works --</h1>
-                    <h1 className={styles.subtitle}>自慢の制作物たち</h1>
-                    <section className={styles.worksListSection}>
-                        {isLoading ? (
-                            <div className={styles.loadingContainer}>
-                                <LineSpinner
-                                    size="60"
-                                    stroke="4"
-                                    speed="1"
-                                    color="#991B1B"
-                                />
-                            </div>
-                        ) : (
-                            works.map((work) => (
-                                <a key={work.id} href={work.link} target="_blank">
-                                    <div className={styles.workItemContainer}>
-                                        {work.images && (
-                                            <img
-                                                src={work.images.url}
-                                                alt={work.title}
-                                                className={styles.workImage}
-                                            />
-                                        )}
-                                        <div className={styles.workContent}>
-                                            <h3 className={styles.workTitle}>{work.title}</h3>
-                                            <p className={styles.workDescription}>{work.description}</p>
+                <section className={commonStyles.section}>
+                    <div className={commonStyles.container}>
+                        <div className={commonStyles.header}>
+                            <h2 className={commonStyles.title}>つくったもの一覧</h2>
+                        </div>
+                        <div className={styles.worksListSection}>
+                            {isLoading ? (
+                                <div className={styles.loadingContainer}>
+                                    <LineSpinner
+                                        size="60"
+                                        stroke="4"
+                                        speed="1"
+                                        color="#991B1B"
+                                    />
+                                </div>
+                            ) : (
+                                works.map((work) => (
+                                    <a key={work.id} href={work.link} target="_blank" >
+                                        <div className={styles.workItem}>
+                                            {work.images && (
+                                                <img
+                                                    src={work.images.url}
+                                                    alt={work.title}
+                                                    className={styles.workImage}
+                                                />
+                                            )}
+                                            <div className={styles.workContent}>
+                                                <h3 className={styles.workTitle}>{work.title}</h3>
+                                                <p className={styles.workDescription}>{work.description}</p>
+                                            </div>
                                         </div>
-                                    </div>
-                                </a>
-                            ))
-                        )}
-                    </section>
-                    <a href="/" className={styles.homeLink}>トップページに戻る</a>
+                                    </a>
+                                ))
+                            )}
+                        </div>
+                        <a href="/" className={styles.homeLink}>トップページに戻る</a>
+                    </div>
                 </section>
+                <Footer />
             </div>
         </main>
     );
