@@ -1,12 +1,13 @@
-import styles from './self_intro.module.css';
+import styles from '../../styles/self_intro.module.css';
+import commonStyles from '../../styles/common.module.css';
 
 export default function Self_Introduction() {
     return (
-        <section className={styles.container}>
-            <div className={styles.header}>
-                <hr className={styles.separator} />
-                <h2 className={styles.title}>About Me</h2>
-                <hr className={styles.separator} />
+        <section className={commonStyles.container}>
+            <div className={commonStyles.header}>
+                <hr className={commonStyles.separator} />
+                <h2 className={commonStyles.title}>About Me</h2>
+                <hr className={commonStyles.separator} />
             </div>
             <div className={styles.content}>
                 {/* 自己紹介 */}

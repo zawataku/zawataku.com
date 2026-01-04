@@ -5,7 +5,7 @@ import News from "./news";
 import Skills from "./skills";
 import Links from "./links";
 import Footer from "./footer";
-import styles from "./00_top.module.css";
+import styles from "../../styles/00_top.module.css";
 
 export default function Top() {
     return (

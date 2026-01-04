@@ -1,5 +1,5 @@
 import { FaSquareTwitter, FaSquareInstagram, FaSquareGithub } from "react-icons/fa6";
-import styles from "./profile.module.css";
+import styles from "../../styles/profile.module.css";
 
 export default function Profile() {
     return (

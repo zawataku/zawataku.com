@@ -3,7 +3,8 @@ import { client } from '../../libs/client';
 import type { News } from '../../types/microcms';
 import { DotPulse } from 'ldrs/react'
 import 'ldrs/react/DotPulse.css'
-import styles from './news.module.css';
+import styles from '../../styles/news.module.css';
+import commonStyles from '../../styles/common.module.css';
 
 // 日付をフォーマットするヘルパー関数
 const formatDate = (dateString: string) => {
@@ -37,10 +38,10 @@ export default function News() {
     }, []);
 
     return (
-        <section className={styles.container}>
-            <div className={styles.header}>
+        <section className={commonStyles.container}>
+            <div className={commonStyles.header}>
                 <hr className={styles.separator} />
-                <h2 className={styles.title}>更新情報</h2>
+                <h2 className={commonStyles.title}>更新情報</h2>
                 <hr className={styles.separator} />
             </div>
             <ul className={styles.newsList}>

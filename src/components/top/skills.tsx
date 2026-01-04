@@ -1,12 +1,13 @@
-import styles from "./skills.module.css";
+import styles from "../../styles/skills.module.css";
+import commonStyles from '../../styles/common.module.css';
 
 export default function Skills() {
     return (
-        <section className={styles.container}>
-            <div className={styles.header}>
-                <hr className={styles.separator} />
-                <h2 className={styles.title}>Skills</h2>
-                <hr className={styles.separator} />
+        <section className={commonStyles.container}>
+            <div className={commonStyles.header}>
+                <hr className={commonStyles.separator} />
+                <h2 className={commonStyles.title}>Skills</h2>
+                <hr className={commonStyles.separator} />
             </div>
             <div className={styles.skillsList}>
                 <section className={styles.skillSection}>

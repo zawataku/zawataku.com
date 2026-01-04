@@ -1,5 +1,5 @@
 import { FaTwitter, FaInstagram, FaGithub } from "react-icons/fa6";
-import styles from "./links.module.css";
+import styles from "../../styles/links.module.css";
 
 export default function Links() {
     return (

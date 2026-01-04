@@ -3,7 +3,8 @@ import { client } from '../../libs/client';
 import type { Work } from '../../types/microcms';
 import { DotPulse } from 'ldrs/react'
 import 'ldrs/react/DotPulse.css'
-import styles from './works.module.css';
+import styles from '../../styles/works.module.css';
+import commonStyles from '../../styles/common.module.css';
 
 export default function Works() {
     const [works, setWorks] = useState<Work[]>([]);
@@ -28,10 +29,10 @@ export default function Works() {
     }, []);
 
     return (
-        <section className={styles.container}>
-            <div className={styles.header}>
+        <section className={commonStyles.container}>
+            <div className={commonStyles.header}>
                 <hr className={styles.separator} />
-                <h2 className={styles.title}>Works</h2>
+                <h2 className={commonStyles.title}>Works</h2>
                 <hr className={styles.separator} />
             </div>
             {isLoading ? (
