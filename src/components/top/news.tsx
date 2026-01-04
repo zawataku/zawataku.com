@@ -3,6 +3,8 @@ import { client } from '../../libs/client';
 import type { News } from '../../types/microcms';
 import { DotPulse } from 'ldrs/react'
 import 'ldrs/react/DotPulse.css'
+import styles from '../../styles/news.module.css';
+import commonStyles from '../../styles/common.module.css';
 
 // 日付をフォーマットするヘルパー関数
 const formatDate = (dateString: string) => {
@@ -36,30 +38,30 @@ export default function News() {
     }, []);
 
     return (
-        <section className="flex w-full max-w-2xl flex-col gap-8 py-4">
-            <div className="flex items-center justify-center">
-                <hr className="h-[2px] w-4/5 border-t-2 border-dashed border-rubyred md:w-full" />
-                <h2 className="w-full text-center text-2xl font-bold md:text-3xl">更新情報</h2>
-                <hr className="h-[2px] w-4/5 border-t-2 border-dashed border-rubyred md:w-full" />
+        <section className={commonStyles.section}>
+            <div className={commonStyles.container}>
+                <div className={commonStyles.header}>
+                    <h2 className={commonStyles.title}>更新情報</h2>
+                </div>
+                <ul className={styles.newsList}>
+                    {isLoading ? (
+                        <div className={styles.loadingContainer}>
+                            <DotPulse
+                                size="50"
+                                speed="1.3"
+                                color="#991B1B"
+                            />
+                        </div>
+                    ) : (
+                        news.map((item) => (
+                            <li key={item.id} className={styles.newsItem}>
+                                <span className={styles.date}>{formatDate(item.publishedAt)}</span>
+                                <span dangerouslySetInnerHTML={{ __html: item.title }} />
+                            </li>
+                        ))
+                    )}
+                </ul>
             </div>
-            <ul className='flex flex-col gap-3 text-base md:text-lg'>
-                {isLoading ? (
-                    <div className="flex justify-center py-10">
-                        <DotPulse
-                            size="50"
-                            speed="1.3"
-                            color="#991B1B"
-                        />
-                    </div>
-                ) : (
-                    news.map((item) => (
-                        <li key={item.id} className='flex gap-5 overflow-hidden'>
-                            <span className='shrink-0'>{formatDate(item.publishedAt)}</span>
-                            <span dangerouslySetInnerHTML={{ __html: item.title }} />
-                        </li>
-                    ))
-                )}
-            </ul>
         </section>
     );
 }

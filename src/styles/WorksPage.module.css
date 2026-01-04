@@ -1,0 +1,116 @@
+.main {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffebec;
+    padding: 2rem 0.5rem;
+    color: #991B1B;
+}
+
+.container {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    width: 100%;
+    max-width: 56rem;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.loadingContainer {
+    display: flex;
+    justify-content: center;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+}
+
+.workItem {
+    display: flex;
+    border-radius: 0.75rem;
+    padding: 0.25rem;
+    transition-duration: 300ms;
+}
+
+.workItem:hover {
+    opacity: 0.6;
+}
+
+@media (min-width: 768px) {
+    .workItem {
+        padding: 0.75rem;
+    }
+}
+
+.workImage {
+    width: 6rem;
+    height: 6rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.workContent {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.worksListSection {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.workTitle {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    line-clamp: 1;
+    font-size: 1.15rem;
+    line-height: 1.5rem;
+    font-weight: 700;
+}
+
+@media (min-width: 768px) {
+    .workTitle {
+        font-size: 1.25rem;
+        line-height: 2rem;
+    }
+}
+
+.workDescription {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    color: #991B1B;
+}
+
+@media (min-width: 768px) {
+    .workDescription {
+        font-size: 1rem;
+        line-height: 1.75rem;
+    }
+}
+
+.homeLink {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-decoration-line: underline;
+    transition-duration: 300ms;
+    text-underline-offset: 0.25rem;
+}
+
+.homeLink:hover {
+    opacity: 0.6;
+}

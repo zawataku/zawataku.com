@@ -1,0 +1,41 @@
+.iconContainer {
+    display: block;
+}
+
+.icon {
+    margin-top: -50%;
+    width: 9rem;
+    height: 9rem;
+    border-radius: 9999px;
+    border-width: 6px;
+    border-style: solid;
+    border-color: #fff;
+}
+
+.name {
+    text-align: center;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+}
+
+@media (min-width: 768px) {
+    .name {
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+    }
+}
+
+.socialLinks {
+    display: flex;
+    gap: 2rem;
+}
+
+.link {
+    color: #991B1B;
+    transition-duration: 300ms;
+}
+
+.link:hover {
+    opacity: 0.6;
+}
