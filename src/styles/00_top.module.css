@@ -19,10 +19,8 @@
     width: 100%;
     max-width: 56rem;
     flex-direction: column;
+    gap: 2rem;
     align-items: center;
     justify-content: center;
-    border-radius: 0.75rem;
-    background-color: #ffffff;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    background-color: transparent;
 }

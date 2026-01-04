@@ -1,9 +1,11 @@
 import { FaSquareTwitter, FaSquareInstagram, FaSquareGithub } from "react-icons/fa6";
 import styles from "../../styles/profile.module.css";
+import commonStyles from '../../styles/common.module.css';
+
 
 export default function Profile() {
     return (
-        <section className={styles.section}>
+        <section className={commonStyles.section}>
             <div className={styles.iconContainer}>
                 <img
                     src="/img/icon.avif"
