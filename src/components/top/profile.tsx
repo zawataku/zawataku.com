@@ -19,7 +19,7 @@ export default function Profile() {
                 <a href="https://twitter.com/zawataku0819" target="_blank" aria-label="Twitter" className={styles.link}>
                     <FaSquareTwitter size={40} />
                 </a>
-                <a href="https://www.instagram.com/zawataku_photo" target="_blank" aria-label="Instagram" className={styles.link}>
+                <a href="https://www.instagram.com/zawataku_film" target="_blank" aria-label="Instagram" className={styles.link}>
                     <FaSquareInstagram size={40} />
                 </a>
                 <a href="https://www.github.com/zawataku" target="_blank" aria-label="GitHub" className={styles.link}>

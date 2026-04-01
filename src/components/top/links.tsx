@@ -21,7 +21,7 @@ export default function Links() {
                         <span className={styles.iconWrapper}>
                             <FaInstagram size={24} />
                         </span>
-                        <a href="https://www.instagram.com/zawataku_photo" target="blank">Instagram（フィルム多め）</a>
+                        <a href="https://www.instagram.com/zawataku_film" target="blank">Instagram（フィルム多め）</a>
                     </li>
                     <li className={styles.linkItem}>
                         <span className={styles.iconWrapper}>

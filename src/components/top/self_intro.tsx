@@ -11,8 +11,7 @@ export default function Self_Introduction() {
                 <div className={styles.content}>
                     <section className={styles.section}>
                         <h2 className={styles.sectionTitle}>自己紹介</h2>
-                        <p className={styles.text}>ざわたくです。石川県の大学生です。</p>
-                        <p className={styles.text}>さけるチーズとサラダチキンが好きです。</p>
+                        <p className={styles.text}>ざわたくです。さけるチーズとサラダチキンが好きです。</p>
                     </section>
 
                     <section className={styles.section}>
