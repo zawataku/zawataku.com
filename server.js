@@ -10,6 +10,46 @@ const PORT = process.env.PORT || 8080;
 
 app.use(express.static(path.join(__dirname, 'dist')));
 
+// 1. WorksのAPI
+app.get('/api/works', async (req, res) => {
+  try {
+    const limit = req.query.limit || 50;
+    const response = await fetch(`https://zawataku-com.microcms.io/api/v1/works?limit=${limit}`, {
+      headers: {
+        'X-MICROCMS-API-KEY': process.env.MICROCMS_API_KEY
+      }
+    });
+
+    if (!response.ok) throw new Error(`microCMS Error: ${response.status}`);
+
+    const data = await response.json();
+    res.json(data);
+  } catch (error) {
+    console.error('Fetch error:', error);
+    res.status(500).json({ error: 'Failed to fetch works data' });
+  }
+});
+
+// 2. NewsのAPI
+app.get('/api/news', async (req, res) => {
+  try {
+    const limit = req.query.limit || 10;
+    const response = await fetch(`https://zawataku-com.microcms.io/api/v1/news?limit=${limit}`, {
+      headers: {
+        'X-MICROCMS-API-KEY': process.env.MICROCMS_API_KEY
+      }
+    });
+
+    if (!response.ok) throw new Error(`microCMS Error: ${response.status}`);
+
+    const data = await response.json();
+    res.json(data);
+  } catch (error) {
+    console.error('Fetch error:', error);
+    res.status(500).json({ error: 'Failed to fetch news data' });
+  }
+});
+
 app.get('/teapot', (req, res) => {
   res.status(418).sendFile(path.join(__dirname, 'dist', 'index.html'));
 });

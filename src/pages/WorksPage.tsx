@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { client } from '../libs/client';
+import { getWorks } from '../libs/client';
 import type { Work } from '../types/microcms';
 import { LineSpinner } from 'ldrs/react'
 import 'ldrs/react/LineSpinner.css'
@@ -12,11 +12,9 @@ export default function WorksPage() {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        const getWorks = async () => {
+        const fetchWorks = async () => {
             try {
-                const data = await client.get({
-                    endpoint: 'works',
-                });
+                const data = await getWorks();
                 setWorks(data.contents);
             } catch (error) {
                 console.error('データの取得に失敗しました:', error);
@@ -24,8 +22,7 @@ export default function WorksPage() {
                 setIsLoading(false);
             }
         };
-
-        getWorks();
+        fetchWorks();
     }, []);
     return (
         <main className={styles.main}>

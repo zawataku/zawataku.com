@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { client } from '../../libs/client';
+import { getNews } from '../../libs/client';
 import type { News } from '../../types/microcms';
 import { DotPulse } from 'ldrs/react'
 import 'ldrs/react/DotPulse.css'
@@ -20,12 +20,9 @@ export default function News() {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        const getNews = async () => {
+        const fetchNews = async () => {
             try {
-                const data = await client.get({
-                    endpoint: 'news',
-                    queries: { limit: 5 }
-                });
+                const data = await getNews(5);
                 setNews(data.contents);
             } catch (error) {
                 console.error('ニュースの取得に失敗しました:', error);
@@ -33,8 +30,7 @@ export default function News() {
                 setIsLoading(false);
             }
         };
-
-        getNews();
+        fetchNews();
     }, []);
 
     return (

@@ -1,5 +1,5 @@
-import { createClient } from 'microcms-js-sdk';
 import type { Work } from '../types/microcms';
+import type { News } from '../types/microcms';
 
 export type MicroCMSResponse = {
     contents: Work[];
@@ -8,14 +8,25 @@ export type MicroCMSResponse = {
     limit: number;
 };
 
-const serviceDomain = import.meta.env.VITE_MICROCMS_SERVICE_DOMAIN;
-const apiKey = import.meta.env.VITE_MICROCMS_API_KEY;
+export type MicroCMSNewsResponse = {
+    contents: News[];
+    totalCount: number;
+    offset: number;
+    limit: number;
+};
 
-if (!serviceDomain || !apiKey) {
-    throw new Error('microCMSの環境変数が設定されていません');
-}
+export const getWorks = async (limit: number = 50): Promise<MicroCMSResponse> => {
+    const response = await fetch(`/api/works?limit=${limit}`);
+    if (!response.ok) {
+        throw new Error('データの取得に失敗しました');
+    }
+    return response.json();
+};
 
-export const client = createClient({
-    serviceDomain: serviceDomain,
-    apiKey: apiKey,
-});
+export const getNews = async (limit: number = 5): Promise<MicroCMSNewsResponse> => {
+    const response = await fetch(`/api/news?limit=${limit}`);
+    if (!response.ok) {
+        throw new Error('データの取得に失敗しました');
+    }
+    return response.json();
+};

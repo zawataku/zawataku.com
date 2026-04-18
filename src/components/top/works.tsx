@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { client } from '../../libs/client';
+import { getWorks } from '../../libs/client';
 import type { Work } from '../../types/microcms';
 import { DotPulse } from 'ldrs/react'
 import 'ldrs/react/DotPulse.css'
@@ -11,12 +11,9 @@ export default function Works() {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        const getWorks = async () => {
+        const fetchWorks = async () => {
             try {
-                const data = await client.get({
-                    endpoint: 'works',
-                    queries: { limit: 2 }
-                });
+                const data = await getWorks(2);
                 setWorks(data.contents);
             } catch (error) {
                 console.error('データの取得に失敗しました:', error);
@@ -25,7 +22,7 @@ export default function Works() {
             }
         };
 
-        getWorks();
+        fetchWorks();
     }, []);
 
     return (
