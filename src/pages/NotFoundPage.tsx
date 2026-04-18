@@ -1,6 +1,6 @@
-import styles from "../../styles/notfound.module.css";
-import commonStyles from "../../styles/common.module.css";
-import Footer from "../top/footer";
+import styles from "../styles/notfound.module.css";
+import commonStyles from "../styles/common.module.css";
+import Footer from "../components/top/footer";
 
 export default function NotFound() {
     return (

@@ -1,15 +1,17 @@
 import { Routes, Route } from 'react-router-dom'
 
-import Top from './components/top/00_top'
+import TopPage from './pages/TopPage'
 import WorksPage from './pages/WorksPage'
-import NotFound from './components/notfound/notfound'
+import TeapotPage from './pages/TeapotPage'
+import NotFoundPage from './pages/NotFoundPage'
 
 const App = () => {
   return (
     <Routes>
-      <Route path='/' element={<Top />} />
+      <Route path='/' element={<TopPage />} />
       <Route path="/works" element={<WorksPage />} />
-      <Route path='*' element={<NotFound />} />
+      <Route path="/teapot" element={<TeapotPage />} />
+      <Route path='*' element={<NotFoundPage />} />
     </Routes>
   )
 }

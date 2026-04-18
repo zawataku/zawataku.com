@@ -1,13 +1,13 @@
-import Profile from "./profile";
-import Self_Introduction from "./self_intro";
-import Works from "./works";
-import News from "./news";
+import Profile from "../components/top/profile";
+import Self_Introduction from "../components/top/self_intro";
+import Works from "../components/top/works";
+import News from "../components/top/news";
 // import Skills from "./skills";
-import Links from "./links";
-import Footer from "./footer";
-import styles from "../../styles/00_top.module.css";
+import Links from "../components/top/links";
+import Footer from "../components/top/footer";
+import styles from "../styles/00_top.module.css";
 
-export default function Top() {
+export default function TopPage() {
     return (
         <main className={styles.main}>
             <div className={styles.container}>
