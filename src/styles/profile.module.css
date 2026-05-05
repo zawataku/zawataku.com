@@ -10,6 +10,21 @@
     border-width: 6px;
     border-style: solid;
     border-color: #fff;
+    transition: transform 0.75s ease-in-out;
+}
+
+.rotate {
+    animation: rotate 0.75s ease-in-out;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .name {
