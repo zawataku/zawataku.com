@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:backend": "node --watch server.js",
     "build": "tsc -b && vite build",
     "lint": "eslint ./src",
     "lint:debug": "eslint ./src --debug",
