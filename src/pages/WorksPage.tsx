@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { getWorks } from '../libs/client';
 import type { Work } from '../types/microcms';
 import { LineSpinner } from 'ldrs/react'
@@ -62,7 +63,7 @@ export default function WorksPage() {
                                 ))
                             )}
                         </div>
-                        <a href="/" className={styles.homeLink}>トップページに戻る</a>
+                        <Link to="/" className={styles.homeLink}>トップページに戻る</Link>
                     </div>
                 </section>
                 <Footer />
