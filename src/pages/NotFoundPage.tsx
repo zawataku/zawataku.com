@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "../styles/notfound.module.css";
 import commonStyles from "../styles/common.module.css";
 import Footer from "../components/top/footer";
@@ -12,7 +13,7 @@ export default function NotFound() {
                         <p className={styles.credit}>Illustration by 2個 (@chohjaharaSA)</p>
                         <h1 className={styles.title}>404 Not Found</h1>
                         <p className={styles.description}>お探しのページは一時的にアクセスができない状況にあるか、移動もしくは削除された可能性があります。</p>
-                        <a href="/" className={styles.link}>トップページに戻る</a>
+                        <Link to="/" className={styles.link}>トップページに戻る</Link>
                     </div>
                 </section>
                 <Footer />

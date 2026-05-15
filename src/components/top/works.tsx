@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { getWorks } from '../../libs/client';
 import type { Work } from '../../types/microcms';
 import { DotPulse } from 'ldrs/react'
@@ -60,7 +61,7 @@ export default function Works() {
                         </a>
                     ))
                 )}
-                <a href="/works" className={styles.moreLink}>その他はこちら</a>
+                <Link to="/works" className={styles.moreLink}>その他はこちら</Link>
             </div>
         </section>
     );
