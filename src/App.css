@@ -1,8 +1,33 @@
 @import "./styles/reset.css";
 
+:root {
+    --ease-drawer: cubic-bezier(0.32, 0.72, 0, 1);
+}
+
 * {
     font-family: 'GenJyuuGothicX', sans-serif;
     font-weight: 500;
     font-style: normal;
     box-sizing: border-box;
+}
+
+@keyframes page-enter {
+    from {
+        opacity: 0;
+        filter: blur(4px);
+    }
+    to {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+.page-transition {
+    animation: page-enter 0.5s var(--ease-drawer) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .page-transition {
+        animation: none;
+    }
 }
